@@ -19,8 +19,6 @@ const EditProfile = ({ user }) => {
     //Clear Errors
     setErrorMessage("");
     try {
-      const payload = { firstName, lastName, aboutUs, imageUrl, gender, age };
-      console.log("Payload being sent:", payload);
       const response = await axios.patch(
         BASE_URL + "profile/edit",
         {
